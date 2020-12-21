@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="../img/LOGO_64.png"/>
+		<script>
+			function home(){
+				window.location.href="../index.html";
+			}
+		</script>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+				cursor: url(../img/DiamondSword.cur),auto;
+			}
+		</style>
+		<title>联机与服务器搭建</title>
+	</head>
+	<body>
+		<body>
+			<section style="width: 100%;height: 100%;background-image: url(https://pic.yupoo.com/dreamcenter/d40dcbde/b8eb68ba.jpg);position: fixed;"></section>
+			<section class="content" style="width: 1024px;margin: 0 auto;margin-bottom: 100px;position: relative;top: 100px;background-color: rgba(200,200,200,0.7);">
+				<h1 align="center">Minecraft-联机与服务器搭建</h1>
+				<p style="text-align: center;">戴雨航$2020-05-01</p>
+				<hr />
+				
+				<div style="padding: 10px;">
+					<h3>简介</h3>
+					<br />
+					<p>minecraft绝对不只是一个单机哦，也是可以与小伙伴一起联机的。</p>
+					<p>联机，顾名思义，就是几个人一起玩的意思。虽然说的很简单，但是里面的学问可是非常大的!</p>
+					<p>我们现在就来进行联机方式的分类，后面会依次解释方法(#符号表示并且)：</p>
+					<p>1.本地局域网联机。当与小伙伴非常近[可以手牵着手、叫一声就能回话那样近]建议本地联机。</p>
+					<p>2.内网解析联机。当与小伙伴比较远[追着跑绝对抓不住的那种]#没钱#想要是自己的存档#不想用网易本地联机建议用。</p>
+					<p>3.官方平台联机。用网易mc官方平台进行联机，优点简单，缺点不少组件不免费#自由度不高 可。(会被官方监测行为)</p>
+					<p>4.自己搭建服务器。当自己相当腐竹#有足够的钱或者成员集资#op员能力强[防止外挂|熊孩子#能即时处理游戏内部问题]#管理能力强 可。</p>
+					<br />
+					
+					<h3>目录</h3>
+					<br />
+					<p>$0.联机准则摘要</p>
+					<p>$e.联机前提知识</p>
+					<p>$1.本地局域网联机</p>
+					<p>$2.内网解析联机</p>
+					<p>$3.官方平台联机</p>
+					<p>$4.自己搭建服务器</p>
+					<br />
+					
+					
+					
+					<h3>$0联机准则</h3>
+					<br />
+					<p>$0.1禁止任何目的用TNT</p><br />
+					<p>$0.2禁止破坏他人建筑</p><br />
+					<p>$0.3禁止随处倒岩浆和水</p><br />
+					<p>$0.4禁止非op员人士用高级op指令</p><br />
+					<p>$0.5没充分必要理由不得要op权限</p><br />
+					<p>$0.6禁止不当言语讨论</p><br />
+					<p>$0.7私建服务器内不得使用高频红石</p><br />
+					<p>$0.8禁止PVP竞技场外互攻</p><br />
+					<p>$0.9不得擅自掠夺他人物品</p><br>
+					<br />
+					
+					<h3>$e联机前提知识</h3>
+					<br />
+					<h5>$e.1什么是ip</h5><br />
+					<p>$e.1.1对于ip,用来识别网络下的不同计算机，简单的说就是唯一标识</p><br />
+					<p>$e.1.2如何查看自己电脑内网ip?详见下图(当前正在用的网络)</p>
+					<img src="https://pic.yupoo.com/dreamcenter/4b937a61/330a0967.png" width="700px"/><br /><br />
+					<p>$e.1.3我目前正在用的网络的内网ip是192.168.0.101</p><br />
+					<p>$e.1.4非win10的计算机如何查ip自己百度吧，要讲的话要不少图，就略过了。</p>
+					<br />
+					<h5>$e.2什么是port</h5><br />
+					<p>$e.2.1对于port，指的是端口，通过ip我们唯一标识了计算机，但是一个计算机往往有不止一个服务，</p><br />
+					<p>$e.2.2因此port是用来识别一个计算机的特定服务的。比如常用的http服务是80端口。</p><br />
+					<p>$e.2.3对于计算机端口范围0~65536，但是0~1024都被标识专门的服务，所以给自己服务器改端口尽量>10000</p><br />
+					<h5>$e.3什么是掩码</h5><br />
+					<p>$e.3.1子网掩码用来指明一个IP地址的哪些位标识的是主机所在</p><br />
+					<p>$e.3.2子网掩码只有一个作用，就是将某个IP地址划分成网络地址和主机地址两部分</p><br />
+					<p>$e.3.3网络服务商和地域都会影响到子网掩码结果</p><br />
+					<p>$e.3.4部分计算机连接mc服务器出现“无法解析的主机名”，就可以添加掩码解决，但不常用，不多赘述，如有需求，私聊qq</p><br />
+					<h5>$e.4什么是认证</h5><br />
+					<p>$e.4.1服务器用来识别访问者身份的过程是认证，部分mc正版服务器需要minecraft用户认证，这只能通过买正版来登录</p><br />
+					<p>$e.4.2部分认证等级不高的，只要有认证签名的服务器，可找认证的网站注册用户名然后在hmcl外置登录</p><br />
+					<p>$e.4.3认证服务方比如我主站服务器专题的第一个皮肤站，是其中之一，具体的hmcl登录方式自己摸索，应该不难</p><br />
+					<h5>$e.5什么是服务器</h5><br />
+					<p>$e.5.1服务器，就是一个提供服务的计算机，有自搭的还有云服务提供商。</p><br />
+					<p>$e.5.2服务器和自己的电脑唯一的不同在于:性能高。云服务器还有24h服务的优点。</p><br />
+					<h5>$e.6什么是防火墙</h5><br />
+					<p>$e.6.1当一个外网试图通过一个外网访问其子网主机时，子网主机的防火墙会进行拦截，以免信息泄漏</p><br />
+					<p>$e.6.2在同一内网的用户可以自由传输，解析组成的内网会被拦截，也需要关闭防火墙，关闭方法百度</p><br />
+					<h5>$e.6什么是ping通</h5><br />
+					<p>$e.6.1如果两个计算机能访问，那么就会ping通，此时两台机器成功联机</p><br />
+					<p>$e.6.2如何检测是否ping通，我简单写了个程序用来测试，双击运行输入ip即可测试</p><br />
+					<p>$e.6.3程序下载地址:<a href="https://pan.baidu.com/s/1H0YeifOLLMnNx4rOHOHTrQ" target="_blank">提取码: vk55</a></p><br />
+					<br />
+					
+					<h3>$1本地局域网联机</h3>
+					<br />
+					<p>$1.1两方需要在同一网络下，如：同一个无线网。然后进行上方ping通测试成功即可进行下方步骤，否则按上方说明排查失败原因</p><br />
+					<p>$1.2作为服务器一方(提供地图的一方)，启动游戏后按左上角esc键，点开启局域网，此时会有一个端口号port报出</p><br />
+					<p>$1.3告诉连接方自己的ip和port</p><br />
+					<p>$1.4连接方进入~多人游戏>直连~输入 ip:port 点击连接，成功即可连接</p><br />
+					<p>$1.5如果连接失败参考上方说明</p><br />
+					
+					<h3>$2内网解析联机</h3>
+					<br />
+					<p>$2.1前往蒲公英内网穿透官网注册账号:<a href="https://pgy.oray.com/" target="_blank">蒲公英</a></p><br />
+					<p>$2.2前往控制台创建网络</p>
+					<img src="https://pic.yupoo.com/dreamcenter/a91144fa/60bfc89b.png" width="800px"/>
+					<br /><br />
+					<p>$2.3进行如图设置(名称/类型/添加软件成员>选中网络成员>完成)，设置成员个数和成员密码</p>
+					<img src="https://pic.yupoo.com/dreamcenter/5dcdc7bb/c67e5436.png" width="800px"/>
+					<img src="https://pic.yupoo.com/dreamcenter/0552aead/1a680c63.png"/>
+					<br /><br />
+					<p>$2.4回到蒲公英内网穿透官网主页，自己和成员都下载蒲公英软件，分配给成员VPN ID号</p><br />
+					<p>$2.5然后大家用分配得到的号和对应成员密码进行登录，并且利用组网的IP进行ping通测试</p><br />
+					<img src="https://pic.yupoo.com/dreamcenter/3fc2c35b/b3a35328.png" width="800px"/>
+					<br /><br />
+					<p>$2.6接下来的步骤就同$1的各个步骤了，走一遍，<b>注意，防火墙必须关闭!</b></p><br />
+					
+					<h3>$3官方平台联机</h3>
+					<br />
+					<p>$3.1mc官方登录软件，自动装载了不少联机服务器</p><br />
+					<p>$3.2网易本地联机或者租赁服务器联机也很方便</p><br />
+					<p>$3.3其它联机平台</p><br />
+					<p>$3.4加入他人提供的服务器进行联机</p><br />
+					<p>$3.5嗯，没了，比较简单~</p><br />
+					
+					<h3>$4自己搭建服务器</h3>
+					<br />
+					<p>$4.1选择一个云服务器提供商，建议购买内存8G+的，带宽看mc服务器人数，新手就用winsdows平台好了。</p><br />
+					<p>$4.2能搭服务器的同志，我默认计算机的基础知识都不错了，所以细节不解释了。</p><br />
+					<p>$4.3进入我的主站>服务器>第二个MCVersions网站下载所需版本的服务器</p><br />
+					<p>$4.4在服务器java进行运行配置，具体的默认你们都会了。</p><br />
+					<p>$4.5运行server.jar，在命令行java -Xmx1024M -Xms512M -jar server.jar</p><br />
+					<p>$4.6生成eula.txt文件。编辑eula.txt。将eula=false改为eula=true。</p><br />
+					<p>$4.7再次$4.5就会自动搭载了，其他配置自行wiki修改</p><br />
+					<p>$4.8然后就可以开始游戏啦(我尝试过，2G内存服务器也能带动一个世界，但是容易崩服)</p><br />
+					<br />
+					
+					<h1 style="color: aqua;">以上就是联机的方式了，还有什么不明白的回到主站最下方有我的联系方式哦^.^</h1>
+				</div>
+			</section>
+			<button onclick="home()" style="width: 150px;height: 40px;background-color: rgba(0,0,0,0);border: 2px solid coral;position: absolute;color: coral;font-weight: bold;letter-spacing: 5px;top: 108px;right: calc(50% - 508px);">回到主站</button>
+			
+		</body>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0;cursor: url(../img/cursor.ico),auto;}
+ul,li{list-style: none;}
+img{display: block;}
+a{text-decoration: none;color: white;}
+h1,h2,h3{font-size: 16px;}
+body{font-family: arial;
+}
+
+.l{float: left;}
+.r{float: right;}
+.clear:after{content: "";clear: both;display: block;}
+.container-fluid{width: 100%;}
+.container{width: 1280px;margin: 0 auto;position: relative;}
+
+.delborder{border-width: 0;outline: none;}

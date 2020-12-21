@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="./js/jquery-3.4.1.js"></script>
+		<script>
+			$(function(){
+				loginCheck();
+				$(".btn1").click(function(){
+					window.location.href="/mchelper/login"
+				});
+			});
+			function loginCheck(){
+				if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+					alert("暂不支持手机访问！");
+				}else{
+					var value = navigator.userAgent.toLowerCase().match(/chrome\/([\d.]+)/);
+					if(value==null){
+						alert("请使用chromn内核浏览器访问");
+					}else{
+						$("body").css("display","block");
+					}
+				}
+			}
+		</script>
+		<link rel="icon" href="./img/LOGO_64.png"/>
+		<link rel="stylesheet" href="./css/color.css"/>
+		<link rel="stylesheet" href="./css/common.css"/>
+		<style>
+			*{
+				cursor: url(./img/DiamondSword.cur),auto;
+			}
+			html,body{width: 100%;height: 100%;}
+			.panel{
+				width: 30%;height: 200px;
+				margin: 30px 20px;
+				background-color: rgba(250,250,250,0.5);
+				box-shadow: 0 0 10px rgba(255,255,255,0.8);
+				border: 2px solid rgba(0,255,255,0.3);
+				border-radius: 6px;
+				display: inline-block;
+				overflow: hidden;
+			}
+			.panel:hover{
+				position: relative;
+				box-shadow: 0 -2px 10px rgba(255,255,255,0.8);
+				border: 2px solid rgba(0,255,255,0.8);
+				/* top: -3px; */
+			}
+			.panel>span:first-child{
+				/*width: 20%;
+				height: 100%;
+				border-radius: 5px;
+				display: inline-block;*/
+				width: 100%;
+				height: 120px;
+				border-radius: 5px;
+				display: inline-block;
+			}
+			.panel>span:first-child p:first-child{
+				/*font-size: 30px;
+				font-weight: bold;
+				color: floralwhite;
+				text-align: center;*/
+				font-size: 30px;
+				font-weight: bold;
+				color: floralwhite;
+				text-align: center;
+				margin-top: 10%;
+				letter-spacing: 20px;
+			}
+			.panel>span:first-child p:last-child{
+				font-size: 14px;
+				font-weight: bold;
+				color: white;
+				text-align: center;
+				letter-spacing: 5px;
+				position: relative;
+				left: -8px;
+			}
+			.panel>span:last-child div{
+				width: 64px;height: 64px;background-color: rgba(255,255,255,0.5);
+				margin: 8px 4px;
+				border-radius: 6px;
+				display: inline-block;
+				overflow: hidden;
+			}
+			.panel>span:last-child div:hover{
+				position: relative;
+				top: -2px;
+				box-shadow: 0 0px 10px rgba(255,255,255,0.8);
+				box-sizing: content-box;
+			}
+			.panel>span:last-child div img{
+				width: 100%;
+				
+			}
+		</style>
+		<title>minecrafthelper-dyh</title>
+	</head>
+	<body style="display: none;">
+		<!-- <button class="btn1">login</button> -->
+		<section style="width: 100%;height: 100%;background-image: url(https://pic.yupoo.com/dreamcenter/fb5c3eb2/d235e131.jpg);position: fixed;">
+			
+		</section>
+		<section style="position: relative;overflow: hidden;">
+			<img src="./img/minecraft_PNG81.png" width="500px" style="margin-top: -10px;margin-bottom: -20px;"/>
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="https://music.163.com/outchain/player?type=0&id=4997739793&auto=1&height=32" style="float: right;margin-top: -80px;margin-right: 50px;"></iframe>
+		</section>
+		<section style="position: relative;">
+			<div class="panel"><!-- 相关教学（怎么下载/装模组/联机/搭建服务器） -->
+				<span class="bk_0000ff_02">
+					<p>教学</p>
+					<p>*包括下载安装mc/组件/op/server教学*</p>
+				</span>
+				<span>
+					<div><a href="./sub/start.html" title="mc下载与安装运行详细教程" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/d204124a/64fb8ed1.jpg"/></a></div>
+					<div><a href="./sub/packs.html" title="组件的安装" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/47187904/6543cc34.jpg"/></a></div>
+					<div><a href="./sub/server.html" title="联机&服务器搭建" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/eebc857a/7d311e75.jpg"/></a></div>
+					<div><a href="http://mc.163.com/m/wikigrab/" title="网易出的教学" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/cd4eceff/d1e33f99.jpg"/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+				</span>
+			</div>
+			<div class="panel">
+				<span class="bk_ff00ff_02">
+					<p>国站</p>
+					<p>*国内的minecraft网站都比较综合*</p>
+				</span>
+				<span>
+					<div><a href="https://www.mcbbs.net/" title="Minecraft(我的世界)中文论坛" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/4e354347/f0d247b0.jpg"/></a></div>
+					<div><a href="http://www.minecraftxz.com/" title="我的世界-Minecraft中文下载站" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/8dab781c/504eef11.png"/></a></div>
+					<div><a href="https://www.mcmod.cn/" title="MC百科|最大的Minecraft中文MOD百科" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/94968a7a/b9d5b3e7.png"/></a></div>
+					<div><a href="https://minecraft-zh.gamepedia.com/" title="中文Minecraft Wiki - 最详细的官方我的世界百科" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/f75a539b/252d0c8b.png"/></a></div>
+					<div><a href="https://www.secretmine.net/" title="我的世界(Minecraft)中文分享站_我的世界中文网" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/f30be16a/7f78f56d.jpg"/></a></div>
+					<div><a href="http://www.uc129.com/minecraft/" title="uc129我的世界专区" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/493865ca/4851cb08.png"/></a></div>
+				</span>
+			</div>
+			<div class="panel">
+				<span class="bk_ffff00_02">
+					<p>外站</p>
+					<p>*国外的网站大都比较专题*</p>
+				</span>
+				<span>
+					<div><a href="https://www.minecraft.net/zh-hans/" title="minecraft official net" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/09dcb823/1a0d71d0.jpg"/></a></div>
+					<div style="background-color: #FFFFFF;"><a href="https://www.optifine.net/home" title="OptiFine - Minecraft performance tuning and advanced graphics" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/88d6ede8/d40f882f.png"/></a></div>
+					<div><a href="https://www.curseforge.com/minecraft/modpacks" title="forge for minecraft" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/441f6db0/e35bc1c2.jpeg"/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+				</span>
+			</div>
+			<div class="panel">
+				<span class="bk_000000_02">
+					<p>服务器</p>
+					<p>*服务器的提供方*</p>
+				</span>
+				<span>
+					<div><a href="https://skin.vlssu.com/" title="仪表盘 - VlssuSkin" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/defc510f/db4fbcd2.jpg"/></a></div>
+					<div><a href="https://mcversions.net/" title="Minecraft Versions Download List" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/30b47ce4/35752755.png"/></a></div>
+					<div><a href="http://files.minecraftforge.net/" title="forge-mc-program" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/3452aebf/8e0c171a.png"/></a></div>
+					<div><a href="https://www.spongepowered.org/" title="插件加载" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/f593deb0/0e51b2f9.jpg"/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+					<div><a href="https://chunkbase.com" title="区块计算器" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/d79607e5/3f811829.jpg"/></a></div>
+				</span>
+			</div>
+			<div class="panel">
+				<span class="bk_ff0000_02">
+					<p>推荐组件</p>
+					<p>*含光影/材质/模组/存档*</p>
+				</span>
+				<span>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+				</span>
+			</div>
+			<div class="panel">
+				<span class="bk_500050_02">
+					<p>推荐视频</p>
+					<p>*各大平台优秀视频*</p>
+				</span>
+				<span>
+					<div><a href="https://space.bilibili.com/2170934/" title="明月庄主$红石教学" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/63907b04/bd9e1bcc.jpg"/></a></div>
+					<div><a href="https://space.bilibili.com/133430292/" title="创小业$op教学" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/3f6399fc/bf06e972.jpg"/></a></div>
+					<div><a href="https://space.bilibili.com/3950511/" title="陈氏赵小黑黑黑黑$生存" target="_blank"><img src="https://pic.yupoo.com/dreamcenter/19cf5142/328322ce.jpg"></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+					<div><a href="" title="" target="_blank"><img src=""/></a></div>
+				</span>
+			</div>
+			<!--编程/同人-->
+		</section>
+		<section style="text-align: center;position: relative;bottom: 0px;color: #FFFAF0;">
+			<p>戴雨航&copy;2020</p>
+			<p>QQ：1981669259</p>
+			<p>google邮箱:daiyuhang07@gmail.com</p>
+			<p>所有图片均引自网上未知作者，如有侵权，告诉我自删</p>
+		</section>
+	</body>
+</html>
