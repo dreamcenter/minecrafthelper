@@ -2,7 +2,7 @@
 我的世界帮助站
 
 参考网站:
-http://www.dreamcenter.top/mchelper/
+[https://www.dreamcenter.top/s1/2LKcb4](https://www.dreamcenter.top/s1/2LKcb4)
 
 功能
 - 提供mod光影材质下载网站分享
